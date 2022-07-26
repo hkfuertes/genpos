@@ -2,4 +2,7 @@
 <% @students.each do |user| %>
     <%= user.name %>
 <%end%>
+
+<% if current_page?('students_home') %>
+<% end %>
    
