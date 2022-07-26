@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Miguel
+  last_name: Fuertes
+  birthday: 2022-07-26
+
+two:
+  name: Javier
+  last_name: Fuertes
+  birthday: 2022-07-26
