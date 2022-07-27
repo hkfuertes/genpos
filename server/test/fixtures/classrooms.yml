@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  level: 1º ESO
+  letter: A
+  subject: Física
+
+two:
+  level: 2º ESO
+  letter: B
+  subject: Lengua
