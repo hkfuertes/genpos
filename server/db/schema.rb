@@ -19,13 +19,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_27_165245) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "student_classroom", charset: "utf8mb4", force: :cascade do |t|
+  create_table "student_classrooms", charset: "utf8mb4", force: :cascade do |t|
     t.bigint "student_id", null: false
     t.bigint "classroom_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["classroom_id"], name: "index_student_classroom_on_classroom_id"
-    t.index ["student_id"], name: "index_student_classroom_on_student_id"
+    t.index ["classroom_id"], name: "index_student_classrooms_on_classroom_id"
+    t.index ["student_id"], name: "index_student_classrooms_on_student_id"
   end
 
   create_table "students", charset: "utf8mb4", force: :cascade do |t|
@@ -36,6 +36,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_27_165245) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "student_classroom", "classrooms"
-  add_foreign_key "student_classroom", "students"
+  add_foreign_key "student_classrooms", "classrooms"
+  add_foreign_key "student_classrooms", "students"
 end
