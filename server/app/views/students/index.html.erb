@@ -3,14 +3,10 @@
     <div class="card">
       <div class="card-header">
         <div class="card-tools">
-          <div class="input-group input-group-sm" style="width: 150px;">
-            <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
-            <div class="input-group-append">
-              <button type="submit" class="btn btn-default">
-                <i class="fas fa-search"></i>
-              </button>
-            </div>
-          </div>
+          <a href="<%= new_student_path() %>" class="btn btn-block btn-outline-dark">
+            <i class="fas fa-plus"></i>&nbsp;
+            Añadir
+          </a>
         </div>
       </div>
       <div class="card-body table-responsive p-0">
@@ -22,21 +18,27 @@
               <th>Apellido</th>
               <th>Edad</th>
               <th>Clase</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
-            <% @students.each do |user| %>
-              <tr>
-                <td><%= user.id %></td>
-                <td><%= user.name %></td>
-                <td><%= user.last_name %></td>
-                <td>~ <%= Date.today.year - user.birthday.year %> años</td>
+            <% @students.each do |student| %>
+              <tr href="<%= student_path(student)%>" class="linkable" style="cursor: pointer;" >
+                <td><%= student.id %></td>
+                <td><%= student.name %></td>
+                <td><%= student.last_name %></td>
+                <td>~ <%= Date.today.year - student.birthday.year %> años</td>
                 <td>
-                  <% user.classrooms.map do |c| %>
-                    <span class="badge bg-navy">
+                  <% student.classrooms.map do |c| %>
+                    <span class="badge bg-dark">
                       <%= c.level %> <%= c.letter %>
                     </span>
                   <% end %>
+                </td>
+                <td>
+                  <div class="float-right">
+                    <a href="<%= edit_student_path(student) %>" class="text-dark"><i class="fas fa-edit"></i></a>
+                  </div>
                 </td>
               </tr>
             <%end%>
@@ -58,4 +60,12 @@
     <li class="breadcrumb-item"><a href="<%= root_path %>">Home</a></li>
     <li class="breadcrumb-item active">Estudiantes</li>
   </ol>
+<% end %>
+
+<% content_for :custom_scripts do %>
+  <script>
+    $('.linkable').click(function(e){
+      window.location = $(this).attr('href');
+    });
+  </script>
 <% end %>

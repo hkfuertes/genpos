@@ -1,0 +1,35 @@
+<p style="color: green"><%= notice %></p>
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-tools float-right">
+          <a href="<%= edit_student_path(@student) %>" class="btn btn-outline-dark">
+            <i class="fas fa-edit"></i>&nbsp;
+            Editar
+          </a>
+          <a href="#" class="btn btn-danger confirmation">
+            <i class="fas fa-trash"></i>&nbsp;
+            Eliminar
+          </a>
+        </div>
+      </div>
+      <div class="card-body p-0">
+        <%= render @student %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<%# =================================== %>
+<% content_for :title do %>
+  <%= @student.name %> <%= @student.last_name %>
+<% end %>
+<% content_for :breadcrumb do %>
+  <ol class="breadcrumb float-sm-right">
+    <li class="breadcrumb-item"><a href="<%= root_path %>">Home</a></li>
+    <li class="breadcrumb-item"><a href="<%= students_path %>">Estudantes</a></li>
+    <li class="breadcrumb-item active"><%= @student.name %> <%= @student.last_name %></li>
+  </ol>
+<% end %>
