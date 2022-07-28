@@ -1,63 +1,61 @@
 <% courses = Classroom.all %>
 <%= form_with(model: student) do |form| %>
   <% if student.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(student.errors.count, "error") %> prohibited this student from being saved:</h2>
-      <ul>
-        <% student.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+    <div class="row">
+      <div class="col-12">
+        <div class="callout callout-danger">
+          <h5><%= pluralize(student.errors.count, "error") %> prohibited this student from being saved:</h2>
+        </h5>
+        <ul>
+          <% student.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
     </div>
-  <% end %>
-  <div>
-  </div>
-  <div class="row">
-    <div class="col-md-4 col-sm-12">
-      <div class="card">
-        <div class="card-header">
-          <h3 class="card-title">Estudiante</h3>
+<% end %>
+<div class="row">
+  <div class="col-md-4 col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">Estudiante</h3>
+      </div>
+      <form>
+        <div class="card-body">
+          <div class="form-group">
+            <label for="name">Nombre</label>
+            <%= form.text_field :name, :class => "form-control", :placeholder => "Nombre", :id => "name" %>
+          </div>
+          <div class="form-group">
+            <label for="last_name">Apellido</label>
+            <%= form.text_field :last_name, :class => "form-control", :placeholder => "Apellido", :id => "last_name" %>
+          </div>
+          <div class="form-group">
+            <label for="birthday">Nacimiento</label>
+            <%= form.text_field :birthday, :class => "form-control", :placeholder => "Nacimiento", :id => "birthday", :type=>'date' %>
+          </div>
         </div>
-        <form>
-          <div class="card-body">
-            <div class="form-group">
-              <label for="name">Nombre</label>
-              <%= form.text_field :name, :class => "form-control", :placeholder => "Nombre", :id => "name" %>
-            </div>
-            <div class="form-group">
-              <label for="last_name">Apellido</label>
-              <%= form.text_field :last_name, :class => "form-control", :placeholder => "Apellido", :id => "last_name" %>
-            </div>
-            <div class="form-group">
-              <label for="birthday">Nacimiento</label>
-              <%= form.text_field :birthday, :class => "form-control", :placeholder => "Nacimiento", :id => "birthday", :type=>'date' %>
-            </div>
-          </div>
-          <div class="card-footer">
-            <%= form.submit "Guardar", :class=>"btn btn-dark" %>
-          </div>
-        </form>
-      </div>
-    </div>
-    <div class="col-md-8 col-sm-12">
-      <div class="card">
-        <form>
-          <div class="card-body">
-            <div class="form-group">
-              <label><i>Usa la tecla <code class="text-muted">CONTROL</code> para seleccionar mas de un curso.</i></label>
-              <select multiple="" class="custom-select" id="classroom-selector" name="student[classrooms][]">
-                <% courses.each do |c| %>
-                  <% if student.classrooms.map{|x| x.id}.any? c.id %>
-                    <option value="<%= c.id %>" selected><%= c.subject %> (<%= c.level %> <%= c.letter %>)</option>
-                  <% else %>
-                    <option value="<%= c.id %>"><%= c.subject %> (<%= c.level %> <%= c.letter %>)</option>
-                  <% end %>
-                <% end %>
-              </select>
-            </div>
-          </div>
-        </form>
-      </div>
+        <div class="card-footer">
+          <%= form.submit "Guardar", :class=>"btn btn-dark" %>
+        </div>
+      </form>
     </div>
   </div>
+  <div class="col-md-8 col-sm-12">
+    <div class="card">
+      <form>
+        <div class="card-body">
+          <div class="form-group">
+            <label><i>Usa la tecla <code class="text-muted">CONTROL</code> para seleccionar mas de un curso.</i></label>
+            <%= form.select :classrooms, 
+                    options_for_select(Classroom.all.map{|s|["#{s.subject} - (#{s.level} #{s.letter})", s.id]}, student.classrooms.map{|c| c.id}),
+                    {},
+                    {:class => "custom-select", :multiple => true}
+              %>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 <% end %>
