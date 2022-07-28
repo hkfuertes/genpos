@@ -1,6 +1,7 @@
 <%# Use with sidebar! %>
 <% if current_page?('students_home') %>
 <% end %>
+
 <!-- Sidebar -->
 <div class="sidebar">
   <!-- Sidebar Menu -->
@@ -32,7 +33,7 @@
       </li>
       %>
       <li class="nav-item">
-        <a href="<%= students_path %>" class="nav-link <%= "active" if current_page?(controller: 'students') %>">
+        <a href="<%= students_path %>" class="nav-link <%= "active" if request.path.include?('student') %>">
           <i class="nav-icon fas fa-user-graduate"></i>
           <p>Estudiantes</p>
         </a>
