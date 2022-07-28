@@ -15,27 +15,25 @@
             <tr>
               <th>ID</th>
               <th>Nombre</th>
-              <th>Apellido</th>
-              <th>Edad</th>
-              <th>Clase</th>
-              <th></th>
+              <th class="d-none d-md-block">Edad</th>
+              <th >Clase</th>
+              <th ></th>
             </tr>
           </thead>
           <tbody>
             <% @students.each do |student| %>
               <tr href="<%= student_path(student)%>" class="linkable" style="cursor: pointer;" >
                 <td><%= student.id %></td>
-                <td><%= student.name %></td>
-                <td><%= student.last_name %></td>
-                <td>~ <%= Date.today.year - student.birthday.year %> años</td>
-                <td>
+                <td><%= student.name %> <%= student.last_name %></td>
+                <td class="d-none d-md-block">~ <%= Date.today.year - student.birthday.year %> años</td>
+                <td >
                   <% student.classrooms.map do |c| %>
                     <span class="badge bg-dark">
                       <%= c.level %> <%= c.letter %>
                     </span>
                   <% end %>
                 </td>
-                <td>
+                <td >
                   <div class="float-right">
                     <a href="<%= edit_student_path(student) %>" class="text-dark"><i class="fas fa-edit"></i></a>
                   </div>
@@ -48,9 +46,6 @@
     </div>
   </div>
 </div>
-<%# Use with sidebar! %>
-<% if current_page?('students_home') %>
-<% end %>
 <%# =================================== %>
 <% content_for :title do %>
   Estudiantes
@@ -61,7 +56,6 @@
     <li class="breadcrumb-item active">Estudiantes</li>
   </ol>
 <% end %>
-
 <% content_for :custom_scripts do %>
   <script>
     $('.linkable').click(function(e){
