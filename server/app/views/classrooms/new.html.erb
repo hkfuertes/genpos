@@ -1,9 +1,13 @@
-<h1>New classroom</h1>
-
 <%= render "form", classroom: @classroom %>
 
-<br>
+<%# =================================== %>
+<% content_for :title do %>
+  Nueva Asignatura
+<% end %>
 
-<div>
-  <%= link_to "Back to classrooms", classrooms_path %>
-</div>
+<% content_for :breadcrumb do %>
+  <%= render :partial => "layouts/breadcrumb", locals: {path: [
+    {path: root_path, name: "Inicio"},
+    {path: classrooms_path, name: "Asignaturas"},
+    ], current: "Nuevo"} %>
+<% end %>

@@ -7,7 +7,7 @@
 
 <% content_for :breadcrumb do %>
   <%= render :partial => "layouts/breadcrumb", locals: {path: [
-    {path: root_path, name: "Home"},
+    {path: root_path, name: "Inicio"},
     {path: students_path, name: "Estudantes"},
     ], current: "#{@student.name} #{@student.last_name}"} %>
 <% end %>
