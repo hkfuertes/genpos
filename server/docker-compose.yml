@@ -11,15 +11,28 @@ services:
        - db-data:/config
     restart: unless-stopped
 
+  # docker-compose run app rails new . --force --database=mysql --skip-bundle
   app:
     build: .
+    environment:
+      RAILS_ENV: development
     ports:
       - '3000:3000'
     volumes:
-      - ".:/workspace"
+      - .:/workspace
     links:
-      - "database"
-    command: bash -c "rm -f tmp/pids/server.pid && bundle install && rails s -b '0.0.0.0'"
+      - database
+    command: bash -c "rm -f tmp/pids/server.pid && rails s -b '0.0.0.0'"
+
+  phpmyadmin:
+    image: 'phpmyadmin'
+    depends_on:
+      - database
+    environment:
+      - PMA_HOST=database
+    ports:
+      - '8080:80'
+    restart: unless-stopped
 
 volumes: 
   db-data:

@@ -2,7 +2,7 @@ FROM ruby:3
 ENV LANG C.UTF-8
 
 RUN apt-get update 
-RUN apt-get install -y nodejs default-mysql-client --no-install-recommends
+RUN apt-get install -y default-mysql-client --no-install-recommends
 RUN rm -rf /var/lib/apt/lists/*
 
 #Cache bundle install
