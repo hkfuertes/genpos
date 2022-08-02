@@ -46,12 +46,22 @@
       <form>
         <div class="card-body">
           <div class="form-group">
-            <label><i>Usa la tecla <code class="text-muted">CONTROL</code> para seleccionar mas de un curso.</i></label>
-            <%= form.select :classrooms, 
-                    options_for_select(Classroom.all.map{|s|["#{s.subject} - (#{s.level} #{s.letter})", s.id]}, student.classrooms.map{|c| c.id}),
-                    {},
-                    {:class => "custom-select", :multiple => true}
-              %>
+          <% if student.classrooms.length > 0 %>
+            <h4>Asignaturas:</h4>
+              <ul class="list-group">
+                <% student.classrooms.map do |c| %>
+                  <li class="list-group-item">
+                  <b><%= c.subject %></b> - <%= c.level %> <%= c.letter %>
+                  <div class="float-right">
+                      <a href="#" class="text-dark"><i class="fas fa-eye"></i></a>
+                  </div>
+                  </li>
+                <% end %>
+              </ul>
+              <% else %>
+              <h5>No pertenece a ninguna Asignatura</h5>
+              <p>Vaya a la <a href ="<%= classrooms_path %>">asignatura</a> al que quiera que pertenezca y añadalo desde ahi.</p>
+              <% end %>
           </div>
         </div>
       </form>
