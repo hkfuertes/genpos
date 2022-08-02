@@ -1,11 +1,11 @@
 <% if !notice.blank? %>
-<div class="row">
-  <div class="col-12">
-    <div class="callout callout-success">
-      <p><%= notice %></p>
+  <div class="row">
+    <div class="col-12">
+      <div class="callout callout-success">
+        <p><%= notice %></p>
+      </div>
     </div>
   </div>
-</div>
 <% end %>
 <div class="row">
   <div class="col-12">
@@ -28,16 +28,13 @@
     </div>
   </div>
 </div>
-
 <%# =================================== %>
 <% content_for :title do %>
   <%= @classroom.subject %> <small class="text-muted"><%= @classroom.level %> <%= @classroom.letter %></small>
 <% end %>
-
 <% content_for :breadcrumb do %>
   <%= render :partial => "layouts/breadcrumb", locals: {path: [
     {path: root_path, name: "Inicio"},
     {path: classrooms_path, name: "Asignaturas"},
     ], current: "#{@classroom.subject}"} %>
 <% end %>
-
