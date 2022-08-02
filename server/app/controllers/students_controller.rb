@@ -35,7 +35,6 @@ class StudentsController < ApplicationController
   # PATCH/PUT /students/1 or /students/1.json
   def update
     respond_to do |format|
-      raise
       if @student.update(student_params)
         format.html { redirect_to student_url(@student), notice: 'Student was successfully updated.' }
         format.json { render :show, status: :ok, location: @student }
