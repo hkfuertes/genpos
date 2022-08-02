@@ -16,7 +16,8 @@
               <th>ID</th>
               <th>Nombre</th>
               <th class="d-none d-md-block">Edad</th>
-              <th >Clase</th>
+              <th>Curso</th>
+              <th>Asignatura</th>
               <th ></th>
             </tr>
           </thead>
@@ -26,10 +27,17 @@
                 <td><%= student.id %></td>
                 <td><%= student.name %> <%= student.last_name %></td>
                 <td class="d-none d-md-block">~ <%= Date.today.year - student.birthday.year %> años</td>
-                <td >
-                  <% student.classrooms.map do |c| %>
+                <td>
+                  <% student.classrooms.map{ |c| "#{c.level} #{c.letter}" }.uniq.map do |c| %>
                     <span class="badge bg-dark">
-                      <%= c.level %> <%= c.letter %>
+                      <%= c %>
+                    </span>
+                  <% end %>
+                </td>
+                <td>
+                  <% student.classrooms.map{ |c| c.subject }.uniq.map do |c| %>
+                    <span class="badge bg-dark">
+                      <%= c %>
                     </span>
                   <% end %>
                 </td>
