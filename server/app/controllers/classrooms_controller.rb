@@ -21,7 +21,9 @@ class ClassroomsController < ApplicationController
 
   # POST /classrooms or /classrooms.json
   def create
-    @classroom = Classroom.new(classroom_params)
+    students_obj = Student.where(id: classroom_params[:students])
+    final_params = classroom_params.merge({students: students_obj})
+    @classroom = Classroom.new(final_params)
 
     respond_to do |format|
       if @classroom.save
@@ -37,7 +39,9 @@ class ClassroomsController < ApplicationController
   # PATCH/PUT /classrooms/1 or /classrooms/1.json
   def update
     respond_to do |format|
-      if @classroom.update(classroom_params)
+      students_obj = Student.where(id: classroom_params[:students])
+      final_params = classroom_params.merge({students: students_obj})
+      if @classroom.update(final_params)
         format.html { redirect_to classroom_url(@classroom), notice: "Classroom was successfully updated." }
         format.json { render :show, status: :ok, location: @classroom }
       else
@@ -49,7 +53,9 @@ class ClassroomsController < ApplicationController
 
   # DELETE /classrooms/1 or /classrooms/1.json
   def destroy
+    @classroom.students.destroy
     @classroom.destroy
+
 
     respond_to do |format|
       format.html { redirect_to classrooms_url, notice: "Classroom was successfully destroyed." }
@@ -65,6 +71,6 @@ class ClassroomsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def classroom_params
-      params.fetch(:classroom, {})
+      params.fetch(:classroom, {}).permit([:level, :letter, :subject, :students => []])
     end
 end

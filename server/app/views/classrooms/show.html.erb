@@ -16,7 +16,7 @@
             <i class="fas fa-edit"></i>&nbsp;
             Editar
           </a>
-          <a href="#" class="btn btn-danger confirmation">
+          <a href="#" class="btn btn-danger confirmation" method=DELETE >
             <i class="fas fa-trash"></i>&nbsp;
             Eliminar
           </a>
@@ -28,3 +28,16 @@
     </div>
   </div>
 </div>
+
+<%# =================================== %>
+<% content_for :title do %>
+  <%= @classroom.subject %> <small class="text-muted"><%= @classroom.level %> <%= @classroom.letter %></small>
+<% end %>
+
+<% content_for :breadcrumb do %>
+  <%= render :partial => "layouts/breadcrumb", locals: {path: [
+    {path: root_path, name: "Inicio"},
+    {path: classrooms_path, name: "Asignaturas"},
+    ], current: "#{@classroom.subject}"} %>
+<% end %>
+
