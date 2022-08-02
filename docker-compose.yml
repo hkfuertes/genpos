@@ -16,7 +16,7 @@ services:
     ports:
       - '3000:3000'
     volumes:
-      - server:/workspace
+      - ./server:/workspace
     links:
       - database
     command: bash -c "rm -f tmp/pids/server.pid && bundle install && rails s -b '0.0.0.0'"
