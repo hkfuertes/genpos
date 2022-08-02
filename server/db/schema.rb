@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_27_165245) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_02_164724) do
   create_table "classrooms", charset: "utf8mb4", force: :cascade do |t|
     t.string "level"
     t.string "letter"
     t.string "subject"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["level", "letter", "subject"], name: "index_classrooms_on_level_and_letter_and_subject", unique: true
   end
 
   create_table "student_classrooms", charset: "utf8mb4", force: :cascade do |t|
