@@ -1,10 +1,10 @@
 namespace :teachers do
   desc 'Creates a new Teacher (logable user) in the database'
-  task create: :environment do
-    email = prompt('Email: ')
-    password = prompt('Password: ')
-    name = prompt('Name: ')
-    last_name = prompt('LastName: ')
+  task :create , [:email, :password, :name, :last_name] => :environment do |_, args|
+    email = args[:email] || prompt('Email: ')
+    password = args[:password] || prompt('Password: ')
+    name = args[:name] || prompt('Name: ')
+    last_name = args[:last_name] || prompt('LastName: ')
 
     teacher = Teacher.new(email:, password:, name:, last_name:)
     unless teacher.save

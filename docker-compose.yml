@@ -3,23 +3,46 @@ version: '2'
 services:
   database:
     image: ghcr.io/linuxserver/mariadb
+    container_name: mariadb
     environment:
       - MYSQL_ROOT_PASSWORD=${MYSQL_PASSWORD}
     volumes:
        - db-data:/config
     restart: unless-stopped
+    ports:
+      - 3306:3306
 
   app:
-    image: ruby
+    image: ruby:3
     restart: unless-stopped
+    container_name: app
+    environment:
+      RAILS_ENV: production
+      SECRET_KEY_BASE: ${SECRET_KEY}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      TEACHER_EMAIL: ${TEACHER_EMAIL}
+      TEACHER_PASSWORD: ${TEACHER_PASSWORD}
+      TEACHER_NAME: ${TEACHER_NAME}
+      TEACHER_LAST_NAME: ${TEACHER_LAST_NAME}
     ports:
       - ${PORT}:3000
-    workdir: /app
+    working_dir: /app
     volumes:
       - ./server:/app
+      - ./run.sh:/app/run.sh
     depends_on:
       - database
-    command: bash -c "rm -f tmp/pids/server.pid && bundle install && rails s -b '0.0.0.0'"
+    command: ./run.sh
+
+  phpmyadmin:
+    image: 'phpmyadmin'
+    depends_on:
+      - database
+    environment:
+      - PMA_HOST=database
+    ports:
+      - '8080:80'
+    restart: unless-stopped
 
 volumes: 
   db-data:
