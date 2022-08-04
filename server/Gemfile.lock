@@ -108,9 +108,6 @@ GEM
       activesupport (>= 5.0)
     i18n (1.11.0)
       concurrent-ruby (~> 1.0)
-    importmap-rails (1.1.2)
-      actionpack (>= 6.0.0)
-      railties (>= 6.0.0)
     io-console (0.5.11)
     irb (1.4.1)
       reline (>= 0.3.0)
@@ -204,15 +201,9 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
-    stimulus-rails (1.0.4)
-      railties (>= 6.0.0)
     strscan (3.0.3)
     thor (1.2.1)
     timeout (0.3.0)
-    turbo-rails (1.1.1)
-      actionpack (>= 6.0.0)
-      activejob (>= 6.0.0)
-      railties (>= 6.0.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     warden (1.2.9)
@@ -244,7 +235,6 @@ DEPENDENCIES
   capybara
   debug
   devise (~> 4.8, >= 4.8.1)
-  importmap-rails
   jbuilder
   mysql2 (~> 0.5)
   puma (~> 5.0)
@@ -252,8 +242,6 @@ DEPENDENCIES
   rails-i18n
   selenium-webdriver
   sprockets-rails
-  stimulus-rails
-  turbo-rails
   tzinfo-data
   web-console
   webdrivers
