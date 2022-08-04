@@ -1,0 +1,25 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GENPOS</title>
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
+    <%= stylesheet_link_tag 'application' %>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+  </head>
+  <body class="login-page" style="min-height: 466px;">
+    <div class="login-box">
+      <div class="card card-outline card-navy">
+        <div class="card-header text-center">
+          <h1>GENPOS</h1>
+        </div>
+        <div class="card-body">
+          <%= yield %>
+      </div>
+    </div>
+    <%= javascript_include_tag "jquery/jquery.min.js" %>
+    <%= javascript_include_tag "bootstrap/bootstrap.bundle.min.js" %>
+    <%= javascript_include_tag "adminlte/adminlte.min.js" %>
+  </body></html>

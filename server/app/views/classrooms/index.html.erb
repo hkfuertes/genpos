@@ -18,6 +18,7 @@
               <th>Letra</th>
               <th>Asignatura</th>
               <th># Estudiantes</th>
+              <th>Profesor</th>
               <th></th>
             </tr>
           </thead>
@@ -29,9 +30,12 @@
                 <td><%= classroom.letter %></td>
                 <td><%= classroom.subject %></td>
                 <td><%= classroom.students.length %></td>
+                <td><span class="badge bg-dark"><%= classroom.teacher.full_name unless classroom.teacher.nil? %></span></td>
                 <td >
                   <div class="float-right">
+                  <% if current_teacher == classroom.teacher %>
                     <a href="<%= edit_classroom_path(classroom) %>" class="text-dark"><i class="fas fa-edit"></i></a>
+                    <% end %>
                   </div>
                 </td>
               </tr>
