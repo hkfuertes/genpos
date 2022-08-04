@@ -41,10 +41,12 @@
                             </div>
                           </li>
                         <% end %>
-                      <% else %>
-                        <h4>Clase sin alumnos.</h4>
-                      <% end %>
-                    </ul>
+                      </ul>
+                    <% else %>
+                      <ul class="list-group list-group-flush" style="display: none;">
+                        <li class="list-group-item">Clase sin alumnos</li>
+                      </ul>
+                    <% end %>
                   </td>
                 </tr>
               <% end %>
