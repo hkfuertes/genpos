@@ -4,20 +4,20 @@ services:
   database:
     image: ghcr.io/linuxserver/mariadb
     environment:
-      - MYSQL_ROOT_PASSWORD=password
-    ports:
-      - "3306:3306"
+      - MYSQL_ROOT_PASSWORD=${MYSQL_PASSWORD}
     volumes:
        - db-data:/config
     restart: unless-stopped
 
   app:
-    build: server
+    image: ruby
+    restart: unless-stopped
     ports:
-      - '3000:3000'
+      - ${PORT}:3000
+    workdir: /app
     volumes:
-      - ./server:/workspace
-    links:
+      - ./server:/app
+    depends_on:
       - database
     command: bash -c "rm -f tmp/pids/server.pid && bundle install && rails s -b '0.0.0.0'"
 

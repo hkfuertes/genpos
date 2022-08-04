@@ -51,5 +51,5 @@ test:
 production:
   <<: *default
   database: genpos
-#  username: workspace
-#  password: <%= ENV["WORKSPACE_DATABASE_PASSWORD"] %>
+  username: root
+  password: <%= ENV["MYSQL_PASSWORD"] %>
