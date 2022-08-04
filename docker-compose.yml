@@ -5,7 +5,7 @@ services:
     image: ghcr.io/linuxserver/mariadb
     container_name: mariadb
     environment:
-      - MYSQL_ROOT_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_ROOT_PASSWORD=${MYSQLPASSWORD}
     volumes:
        - db-data:/config
     restart: unless-stopped
@@ -17,9 +17,10 @@ services:
     environment:
       RAILS_ENV: production
       SECRET_KEY_BASE: ${SECRET_KEY}
-      MYSQL_HOST: ${MYSQL_HOST}
-      MYSQL_USERNAME: ${MYSQL_USERNAME}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQLHOST: ${MYSQLHOST}
+      MYSQLUSER: ${MYSQLUSER}
+      MYSQLPASSWORD: ${MYSQLPASSWORD}
+      MYSQLDATABASE: ${MYSQLDATABASE}
       TEACHER_EMAIL: ${TEACHER_EMAIL}
       TEACHER_PASSWORD: ${TEACHER_PASSWORD}
       TEACHER_NAME: ${TEACHER_NAME}

@@ -53,6 +53,8 @@ class Teachers::RegistrationsController < Devise::RegistrationsController
     if params.key?(:classrooms)
       classrooms_obj = Classroom.where(id: params[:classrooms])
       params[:classrooms] = classrooms_obj
+    else
+      params[:classrooms] = []
     end
     return params
   end

@@ -50,7 +50,8 @@ test:
 #
 production:
   <<: *default
-  database: genpos
-  host: <%= ENV["MYSQL_HOST"] %>
-  username: <%= ENV["MYSQL_USERNAME"] %>
-  password: <%= ENV["MYSQL_PASSWORD"] %>
+  database: <%= ENV["MYSQLDATABASE"] %>
+  host: <%= ENV["MYSQLHOST"] %>
+  port: <%= ENV["MYSQLPORT"] || 3306 %>
+  username: <%= ENV["MYSQLUSER"] %>
+  password: <%= ENV["MYSQLPASSWORD"] %>
