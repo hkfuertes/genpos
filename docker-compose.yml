@@ -17,6 +17,8 @@ services:
     environment:
       RAILS_ENV: production
       SECRET_KEY_BASE: ${SECRET_KEY}
+      MYSQL_HOST: ${MYSQL_HOST}
+      MYSQL_USERNAME: ${MYSQL_USERNAME}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
       TEACHER_EMAIL: ${TEACHER_EMAIL}
       TEACHER_PASSWORD: ${TEACHER_PASSWORD}
@@ -27,7 +29,6 @@ services:
     working_dir: /app
     volumes:
       - ./server:/app
-      - ./run.sh:/app/run.sh
     depends_on:
       - database
     command: ./run.sh
