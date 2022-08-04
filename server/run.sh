@@ -12,4 +12,9 @@ then
     rails teachers:create[$TEACHER_EMAIL,$TEACHER_PASSWORD,$TEACHER_NAME,$TEACHER_LAST_NAME]
 fi
 
-rails s -b '0.0.0.0' -p $PORT
+if [ ! -z "$PORT" ]
+then
+    rails s -b '0.0.0.0' -p $PORT
+else
+    rails s -b '0.0.0.0'
+fi
