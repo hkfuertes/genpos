@@ -7,11 +7,11 @@ Rails.application.routes.draw do
     post   'login',  to: 'devise/sessions#create',  as: :teacher_session
     delete 'logout', to: 'devise/sessions#destroy', as: :destroy_teacher_session
     # registrations
-    put    '/account',  to: 'devise/registrations#update'
-    # delete '/account',  to: 'devise/registrations#destroy'
-    get    '/account',  to: 'devise/registrations#edit',   as: :edit_teacher_registration
-    patch  '/account',  to: 'devise/registrations#update', as: :teacher_registration
-    # get    '/account/cancel', to: 'devise/registrations#cancel', as: :cancel_teacher_registration# passwords 
+    put    '/account',  to: 'teachers/registrations#update'
+    # delete '/account',  to: 'teachers/registrations#destroy'
+    get    '/account',  to: 'teachers/registrations#edit',   as: :edit_teacher_registration
+    patch  '/account',  to: 'teachers/registrations#update', as: :teacher_registration
+    # get    '/account/cancel', to: 'teachers/registrations#cancel', as: :cancel_teacher_registration# passwords 
   end
 
   resources :classrooms
