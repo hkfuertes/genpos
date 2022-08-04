@@ -13,16 +13,17 @@ services:
 
   # docker-compose run app rails new . --force --database=mysql --skip-bundle
   app:
-    build: .
+    image: ruby:3
     environment:
       RAILS_ENV: development
     ports:
       - '3000:3000'
     volumes:
-      - .:/workspace
+      - .:/app
+    working_dir: /app
     links:
       - database
-    command: bash -c "rm -f tmp/pids/server.pid && rails s -b '0.0.0.0'"
+    command: bash -c "rm -f tmp/pids/server.pid && bundle install && rails s -b '0.0.0.0'"
 
   phpmyadmin:
     image: 'phpmyadmin'
