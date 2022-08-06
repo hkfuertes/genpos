@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :teachers, skip: [:sessions, :registrations, :passwords]
+  devise_for :teachers, skip: %i[sessions registrations passwords]
 
   devise_scope :teacher do
     # sessions
@@ -11,7 +11,8 @@ Rails.application.routes.draw do
     # delete '/account',  to: 'teachers/registrations#destroy'
     get    '/account',  to: 'teachers/registrations#edit',   as: :edit_teacher_registration
     patch  '/account',  to: 'teachers/registrations#update', as: :teacher_registration
-    # get    '/account/cancel', to: 'teachers/registrations#cancel', as: :cancel_teacher_registration# passwords 
+    get '/teachers', to: 'teachers/registrations#new', as: :new_teacher_registration
+    # get    '/account/cancel', to: 'teachers/registrations#cancel', as: :cancel_teacher_registration# passwords
   end
 
   resources :classrooms

@@ -1,7 +1,6 @@
 <%# Use with sidebar! %>
 <% if current_page?('students_home') %>
 <% end %>
-
 <!-- Sidebar -->
 <div class="sidebar">
   <!-- Sidebar Menu -->
@@ -67,6 +66,14 @@
           </li>
         </ul>
       </li>
+      <% if teacher_signed_in? && current_teacher[:admin] == true %>
+      <li class="nav-item">
+        <a href="<%= new_teacher_registration_path %>" class="nav-link <%= "active" if request.path.include?('teacher') %>">
+          <i class="fas fa-chalkboard-teacher"></i>
+          <p>Profesores</p>
+        </a>
+      </li>
+      <% end %>
     </ul>
   </nav>
   <!-- /.sidebar-menu -->
