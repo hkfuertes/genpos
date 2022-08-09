@@ -7,6 +7,10 @@ class Teacher < ApplicationRecord
   has_many :classrooms
 
   def full_name
-    @full_name ||= [name, last_name].join(' ')
-   end
+    [name, last_name].join(' ')
+  end
+
+  def admin?
+    admin
+  end
 end

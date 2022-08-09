@@ -1,0 +1,86 @@
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+  <div class="row">
+    <div class="col-md-8 col-sm-12">
+      <div class="card">
+        <div class="card-body table-responsive p-0">
+          <table class="table table-hover text-nowrap">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Email</th>
+                <th>Nombre</th>
+                <th>Cursos</th>
+                <th>Asignaturas</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @teachers.each do |teacher| %>
+                <tr>
+                  <td><%= teacher.id %></td>
+                  <td><%= teacher.email %></td>
+                  <td><%= teacher.full_name %></td>
+                  <td>
+                    <% teacher.classrooms.map {|c| "#{c.level} #{c.letter}" }.uniq.each do |c| %>
+                      <span class="badge bg-dark"><%= c %></span>
+                    <% end %>
+                  </td>
+                  <td>
+                    <% teacher.classrooms.map {|c| c.subject }.uniq.each do |c| %>
+                      <span class="badge bg-dark"><%= c %></span>
+                    <% end %>
+                  </td>
+                  <td>
+                    <div class="float-right">
+                      <a href="#" class="text-dark"><i class="fas fa-trash"></i></a>
+                  </div>
+                  </td>
+                </tr>
+              <%end%>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">Nuevo profesor</h4>
+        </div>
+        <div class="card-body">
+          <div class="form-group">
+            <%= f.label :email, "Email" %><br />
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :name, "Nombre" %><br />
+            <%= f.text_field :name, autofocus: true, class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :last_name, "Apellido" %><br />
+            <%= f.text_field :last_name, autofocus: true, class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :password, "Contraseña nueva" %> <i>(déjalo en blanco para no cambiarla)</i><br />
+            <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :password_confirmation, 'Confirmacion de contraseña' %><br />
+            <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
+          </div>
+        </div>
+        <div class="card-footer">
+          <%= f.submit "Guardar", :class=>"btn btn-block btn-outline-dark" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  <%# =================================== %>
+  <% content_for :title do %>
+    Profesores
+  <% end %>
+  <% content_for :breadcrumb do %>
+    <%= render :partial => "layouts/breadcrumb", locals: {path: [
+    ], current: "Profesores"} %>
+  <% end %>

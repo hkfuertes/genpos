@@ -1,9 +1,10 @@
 # frozen_string_literal: true
 
 class Teachers::RegistrationsController < Devise::RegistrationsController
-  before_action :configure_sign_up_params, only: [:create]
-  before_action :configure_account_update_params, only: [:update]
-  before_action :redirect_if_teacher_is_not_admin, only: [:new]
+  prepend_before_action :configure_sign_up_params, only: [:create]
+  prepend_before_action :configure_account_update_params, only: [:update]
+  prepend_before_action :redirect_if_teacher_is_not_admin, only: [:new]
+  prepend_before_action :require_no_authentication, only: :cancel
 
   # POST /resource
   def new
@@ -42,9 +43,9 @@ class Teachers::RegistrationsController < Devise::RegistrationsController
 
   protected
 
-  # TODO
+  # TODO: return proper 404
   def redirect_if_teacher_is_not_admin
-    return
+    head :not_found unless current_teacher.admin?
   end
 
   # If you have extra params to permit, append them to the sanitizer.
