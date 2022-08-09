@@ -5,6 +5,8 @@ class Teachers::RegistrationsController < Devise::RegistrationsController
   prepend_before_action :configure_account_update_params, only: [:update]
   prepend_before_action :redirect_if_teacher_is_not_admin, only: [:new]
   prepend_before_action :require_no_authentication, only: :cancel
+  before_action :set_teacher_by_id, only: %i[admin destroy]
+  before_action :set_admin_action, only: [:admin]
 
   # POST /resource
   def new
@@ -12,37 +14,27 @@ class Teachers::RegistrationsController < Devise::RegistrationsController
     super
   end
 
-  # POST /resource
-  def create
-    @teachers = Teacher.all
-    super
+  # DELETE /resource
+  def destroy
+    @teacher_by_id.destroy
+    redirect_to :new_teacher_registration
   end
 
-  # GET /resource/edit
-  # def edit
-  #   super
-  # end
-
-  # PUT /resource
-  # def update
-  #   super
-  # end
-
-  # DELETE /resource
-  # def destroy
-  #   super
-  # end
-
-  # GET /resource/cancel
-  # Forces the session data which is usually expired after sign
-  # in to be expired now. This is useful if the user wants to
-  # cancel oauth signing in/up in the middle of the process,
-  # removing all OAuth session data.
-  # def cancel
-  #   super
-  # end
+  def admin
+    @teacher_by_id[:admin] = @promote
+    @teacher_by_id.save
+    redirect_to :new_teacher_registration
+  end
 
   protected
+
+  def set_teacher_by_id
+    @teacher_by_id = Teacher.find(params[:id])
+  end
+
+  def set_admin_action
+    @promote = params[:act] == 'promote'
+  end
 
   # TODO: return proper 404
   def redirect_if_teacher_is_not_admin
@@ -74,22 +66,11 @@ class Teachers::RegistrationsController < Devise::RegistrationsController
   end
 
   # The path used after sign up.
-  # def after_sign_up_path_for(resource)
-  #   super(resource)
-  # end
-
-  # The path used after sign up for inactive accounts.
-  # def after_inactive_sign_up_path_for(resource)
-  #   super(resource)
-  # end
+  def after_sign_up_path_for(_resource)
+    :new_teacher_registration
+  end
 
   def sign_up(resource_name, resource)
     # sign_in(resource_name, resource)
-  end
-
-  # The path used after sign up. You need to overwrite this method
-  # in your own RegistrationsController.
-  def after_sign_up_path_for(*)
-    :new_teacher_registration
   end
 end
