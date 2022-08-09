@@ -9,9 +9,11 @@ Rails.application.routes.draw do
     # registrations
     put    '/account',  to: 'teachers/registrations#update'
     # delete '/account',  to: 'teachers/registrations#destroy'
-    get    '/account',  to: 'teachers/registrations#edit',   as: :edit_teacher_registration
-    patch  '/account',  to: 'teachers/registrations#update', as: :teacher_registration
+    get    '/account',  to: 'teachers/registrations#edit', as: :edit_teacher_registration
+
+    # creating
     get '/teachers', to: 'teachers/registrations#new', as: :new_teacher_registration
+    post '/teachers', to: 'teachers/registrations#create', as: :teacher_registration
     # get    '/account/cancel', to: 'teachers/registrations#cancel', as: :cancel_teacher_registration# passwords
   end
 

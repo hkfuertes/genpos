@@ -13,9 +13,10 @@ class Teachers::RegistrationsController < Devise::RegistrationsController
   end
 
   # POST /resource
-  # def create
-  #   super
-  # end
+  def create
+    @teachers = Teacher.all
+    super
+  end
 
   # GET /resource/edit
   # def edit
@@ -81,4 +82,14 @@ class Teachers::RegistrationsController < Devise::RegistrationsController
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
+
+  def sign_up(resource_name, resource)
+    # sign_in(resource_name, resource)
+  end
+
+  # The path used after sign up. You need to overwrite this method
+  # in your own RegistrationsController.
+  def after_sign_up_path_for(*)
+    :new_teacher_registration
+  end
 end
