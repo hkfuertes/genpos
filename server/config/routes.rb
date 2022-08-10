@@ -25,6 +25,6 @@ Rails.application.routes.draw do
 
     resources :classrooms
     resources :students
-    root to: 'home#index'
   end
+  root to: 'home#index'
 end

@@ -9,8 +9,8 @@
               <th></th>
               <th>Email</th>
               <th>Nombre</th>
-              <th>Cursos</th>
-              <th>Asignaturas</th>
+              <th class="d-sm-none d-md-table-cell">Cursos</th>
+              <th class="d-sm-none d-md-table-cell">Asignaturas</th>
               <th></th>
             </tr>
           </thead>
@@ -28,12 +28,12 @@
                     </td>
                     <td><%= teacher.email %></td>
                     <td><%= teacher.full_name %></td>
-                    <td>
-                      <% teacher.classrooms.map {|c| "#{c.level} #{c.letter}" }.uniq.each do |c| %>
+                    <td class="d-sm-none d-md-table-cell">
+                      <% teacher.classrooms.map {|c| "#{c.level}" }.uniq.each do |c| %>
                         <span class="badge bg-dark"><%= c %></span>
                       <% end %>
                     </td>
-                    <td>
+                    <td class="d-sm-none d-md-table-cell">
                       <% teacher.classrooms.map {|c| c.subject }.uniq.each do |c| %>
                         <span class="badge bg-dark"><%= c %></span>
                       <% end %>

@@ -6,6 +6,13 @@
     <p><b>Asignatura</b> <br/>
       <h4> <%= classroom.subject %></h4>
     </p>
+    <p><b>Profesor</b> <br/>
+      <% if classroom.teacher.nil? %>
+      <span class="text-muted">No tiene profesor asignado.<span>
+      <% else %>
+      <h4> <%= classroom.teacher.full_name %></h4>
+      <% end %>
+    </p>
   </div>
   <div class="col-lg-8 col-sm-12 p-4">
   <% if classroom.students.length > 0%>
