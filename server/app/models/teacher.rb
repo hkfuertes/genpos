@@ -13,4 +13,12 @@ class Teacher < ApplicationRecord
   def admin?
     admin
   end
+
+  def promote
+    admin = true  
+  end
+
+  def demote
+    admin = false
+  end
 end
