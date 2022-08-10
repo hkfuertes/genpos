@@ -4,9 +4,13 @@ class Teacher < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :classrooms
+  has_many :classrooms, dependent: :nullify
 
   def full_name
-    @full_name ||= [name, last_name].join(' ')
-   end
+    [name, last_name].join(' ')
+  end
+
+  def admin?
+    admin
+  end
 end
