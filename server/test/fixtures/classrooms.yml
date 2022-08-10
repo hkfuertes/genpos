@@ -5,6 +5,7 @@ one:
   level: 1º ESO
   letter: A
   subject: Física
+  teacher_id: 1
 two:
   id: 2
   level: 2º ESO
@@ -20,11 +21,13 @@ r10:
   level: 1º ESO
   letter: B
   subject: Matemáticas
+  teacher_id: 1
 r11:
   id: 11
   level: 1º ESO
   letter: C
   subject: Matemáticas
+  teacher_id: 1
 r3:
   id: 3
   level: 4º ESO
@@ -40,16 +43,19 @@ r6:
   level: 1º ESO
   letter: A
   subject: Tecnología
+  teacher_id: 1
 r7:
   id: 7
   level: 2º ESO
   letter: C
   subject: Matemáticas
+  teacher_id: 1
 r8:
   id: 8
   level: 4º ESO
   letter: A
   subject: Informática
+  teacher_id: 1
 r9:
   id: 9
   level: 1º ESO
