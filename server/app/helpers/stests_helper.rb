@@ -1,0 +1,2 @@
+module StestsHelper
+end
