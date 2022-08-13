@@ -20,7 +20,7 @@ class ClassroomsController < ApplicationController
   # POST /classrooms or /classrooms.json
   def create
     students_obj = Student.where(id: classroom_params[:students])
-    final_params = classroom_params.merge({ students: students_obj })
+    final_params = classroom_params.merge({ students: students_obj, teacher: current_teacher })
     @classroom = Classroom.new(final_params)
 
     respond_to do |format|

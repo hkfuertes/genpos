@@ -1,10 +1,61 @@
-<h1>Editing assestment</h1>
-
-<%= render "form", assestment: @assestment %>
-
-<br>
-
-<div>
-  <%= link_to "Show this assestment", @assestment %> |
-  <%= link_to "Back to assestments", assestments_path %>
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body table-responsive p-0">
+        <table class="table table-hover text-nowrap table-striped table-bordered">
+          <thead>
+            <tr>
+              <th></th>
+              <% @classroom.students.each do |student|%>
+                <th class="rotate"><div><span>
+                  <%= student.name %><%= student.last_name %>
+                </span></div></th>
+              <% end %>
+            </tr>
+          </thead>
+          <tbody>
+            <% @classroom.students.each do |sl|%>
+              <tr>
+                <td><b><%= sl.name %> <%= sl.last_name %></b></td>
+                <% @classroom.students.each do |sc|%>
+                  <% if sl != sc %>
+                    <td></td>
+                  <% else %>
+                    <td class="black"></td>
+                  <% end %>
+                <% end %>
+              </tr>
+            <%end%>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 </div>
+<%# =================================== %>
+<% content_for :title do %>
+  Cuadro sociométrico
+<% end %>
+<% content_for :breadcrumb do %>
+  <%= render :partial => "layouts/breadcrumb", locals: {
+    path: [
+      {path: root_path, name: "Inicio"},
+      {path: assestments_path, name: "Mis Tests"},
+      ], current: "#{@classroom.subject} (#{@classroom.level} #{@classroom.letter})"} %>
+<% end %>
+<% content_for :css do %>
+  <style>
+    .black {
+      background-color: black
+    }
+    th.rotate {
+      /* Something you can count on */
+      height: 196px;
+    }
+
+    th.rotate > div {
+      transform: rotate(270deg);
+      width: 0px;
+    }
+  </style>
+<% end %>

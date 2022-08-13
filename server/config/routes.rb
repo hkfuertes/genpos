@@ -25,7 +25,9 @@ Rails.application.routes.draw do
 
     resources :classrooms
     resources :students
-    resources :assestments
+    #resources :assestments
+    get '/assestments', to: 'assestments#index', as: :assestments
+    get '/assestment', to: 'assestments#edit', as: :edit_assestments
   end
   root to: 'home#index'
 end
