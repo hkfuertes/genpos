@@ -4,7 +4,8 @@ class Assestment < ApplicationRecord
 
   # classroom_id, student_id, { id => val }
   def self.calculate_insights(assestments)
-    values = digest_assestments assestments
+    return [[],[]]
+    values = digest_assestments assestments.to_h { |a| a[:assestments] }.flatten
     positive_mean, negative_mean, impact = calculate_means values
 
     # Popular (>= impact) && (<= negative_mean)

@@ -19,7 +19,7 @@
                 <td><%= Assestment.calculate_insights(classroom.assestment)[0].join(",") %> </td>
                 <td>
                   <div class="float-right">
-                    <a href="<%= edit_assestments_path(classroom: classroom.id) %>" class="text-dark"><i class="fas fa-edit"></i></a>
+                    <a href="<%= edit_assestment_path(classroom: classroom.id) %>" class="text-dark"><i class="fas fa-edit"></i></a>
                   </div>
                 </td>
               </tr>

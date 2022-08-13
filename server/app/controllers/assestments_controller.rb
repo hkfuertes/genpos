@@ -1,63 +1,50 @@
 class AssestmentsController < ApplicationController
+  before_action :accept_all_params
+  before_action :set_update_assestments, only: [:update]
+  before_action :set_classroom, only: %i[edit update]
+  before_action :set_assestments, only: [:edit]
 
   def index; end
 
-  # GET /assestments/1 or /assestments/1.json
   def show; end
 
-  # GET /assestments/1/edit
-  def edit
-    @assestments = Assestment.where(classroom_id: params[:classroom])
-    @classroom = Classroom.find(params[:classroom])
-  end
+  def edit; end
 
-  # POST /assestments or /assestments.json
-  def create
-    @assestment = Assestment.new(assestment_params)
-
-    respond_to do |format|
-      if @assestment.save
-        format.html { redirect_to assestment_url(@assestment), notice: 'Assestment was successfully created.' }
-        format.json { render :show, status: :created, location: @assestment }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @assestment.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # PATCH/PUT /assestments/1 or /assestments/1.json
   def update
-    respond_to do |format|
-      if @assestment.update(assestment_params)
-        format.html { redirect_to assestment_url(@assestment), notice: 'Assestment was successfully updated.' }
-        format.json { render :show, status: :ok, location: @assestment }
+    @assestments.each do |key, assestment|
+      student = Student.find(key.delete_prefix('S').to_i)
+      values = {
+        classroom: @classroom, student:,
+        assestments: assestment.to_json
+      }
+      current_assestment = Assestment.where(values.except(:assestments))
+      if current_assestment.nil?
+        current_assestment = Assestment.new(values)
+        current_assestment.save
       else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @assestment.errors, status: :unprocessable_entity }
+        current_assestment.update(values)
       end
     end
-  end
-
-  # DELETE /assestments/1 or /assestments/1.json
-  def destroy
-    @assestment.destroy
-
-    respond_to do |format|
-      format.html { redirect_to assestments_url, notice: 'Assestment was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    redirect_to :assestments
   end
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
-  def set_assestment
-    @assestment = Assestment.find(params[:id])
+  def set_update_assestments
+    @assestments = params[:assestment].to_h.transform_values do |value|
+      value.delete_if { |_, v| v.empty? }
+    end.delete_if { |_, v| v.empty? }
   end
 
-  # Only allow a list of trusted parameters through.
-  def assestment_params
-    params.fetch(:assestment, {})
+  def set_assestments
+    @assestments = Assestment.where(classroom_id: params[:classroom])
+  end
+
+  def set_classroom
+    @classroom = Classroom.find(params[:classroom])
+  end
+
+  def accept_all_params
+    params.permit!
   end
 end
