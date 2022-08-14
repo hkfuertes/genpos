@@ -1,0 +1,121 @@
+<form method="post">
+  <input type="hidden" name="_method" value="put" />
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body table-responsive p-0">
+          <table class="table table-hover text-nowrap table-striped table-bordered">
+            <thead>
+              <tr>
+                <th></th>
+                <% @classroom.students.each do |student|%>
+                  <th class="rotate">
+                    <div><span>
+                        <%= student.name %> <%= student.last_name %>
+                      </span></div>
+                  </th>
+                <% end %>
+              </tr>
+            </thead>
+            <tbody>
+              <% @classroom.students.each do |sl|%>
+                <% assestment = @prep_assest[sl.id] || {} %>
+                <tr>
+                  <td><b><%= sl.name %> <%= sl.last_name %></b></td>
+                  <% @classroom.students.each do |sc|%>
+                    <% if sl != sc %>
+                      <td class="smile-click text-center align-middle">
+                        <input id="<%= "#{sl.id}_#{sc.id}" %>" type="hidden" name="assestment[S<%= sl.id %>][<%= sc.id%>]" value="<%= assestment.dig(sc.id)%>" />
+                        <% if assestment.dig(sc.id) == 1 %>
+                          <i id="<%= "#{sl.id}_#{sc.id}" %>_up" class="fas fa-smile-beam text-info"></i>
+                          <i id="<%= "#{sl.id}_#{sc.id}" %>_down" class="fas fa-frown text-danger" style="display: none;"></i>
+                          <i id="<%= "#{sl.id}_#{sc.id}" %>_zero" class="fas fa-dice" style="display: none; color: rgba(0,0,0,0.1);"></i>
+                        <% elsif assestment.dig(sc.id) == -1  %>
+                          <i id="<%= "#{sl.id}_#{sc.id}" %>_up" class="fas fa-smile-beam text-info" style="display: none;"></i>
+                          <i id="<%= "#{sl.id}_#{sc.id}" %>_down" class="fas fa-frown text-danger"></i>
+                          <i id="<%= "#{sl.id}_#{sc.id}" %>_zero" class="fas fa-dice" style="display: none; color: rgba(0,0,0,0.1);"></i>
+                        <% else %>
+                          <i id="<%= "#{sl.id}_#{sc.id}" %>_up" class="fas fa-smile-beam text-info" style="display: none;"></i>
+                          <i id="<%= "#{sl.id}_#{sc.id}" %>_down" class="fas fa-frown text-danger" style="display: none;"></i>
+                          <i id="<%= "#{sl.id}_#{sc.id}" %>_zero" class="fas fa-dice" style="color: rgba(0,0,0,0.1);"></i>
+                        <% end %>
+                      </td>
+                    <% else %>
+                      <td class="black"></td>
+                    <% end %>
+                  <% end %>
+                  <td></td>
+                </tr>
+              <%end%>
+            </tbody>
+          </table>
+        </div>
+        <div class="card-footer">
+          <input type="submit" class="btn btn-block btn-outline-dark" value="Guardar" />
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+<%# =================================== %>
+<% content_for :title do %>
+  Matriz Sociométrica
+<% end %>
+<% content_for :breadcrumb do %>
+  <%= render :partial => "layouts/breadcrumb", locals: {
+    path: [
+      {path: root_path, name: "Inicio"},
+      {path: assestments_path, name: "Mis Tests"},
+      ], current: "#{@classroom.subject} (#{@classroom.level} #{@classroom.letter})"} %>
+<% end %>
+<% content_for :css do %>
+  <style>
+    .black {
+      background-color: black
+    }
+    th.rotate {
+      /* Something you can count on */
+      height: 196px;
+    }
+
+    th.rotate > div {
+      transform: rotate(270deg);
+      width: 0px;
+    }
+
+    td.smile-click{
+      padding: 0;
+      font-size: 32px;
+    }
+  </style>
+<% end %>
+<% content_for :custom_scripts do %>
+  <script>
+    $('td.smile-click').click(function(e){
+      e.preventDefault();
+      var input = $(this).children("input");
+      var id = "#"+input.attr('id');
+
+      if(input.val() == 1){
+        //Change to -1
+        input.val(-1);
+        $(id+'_up').hide();
+        $(id+'_down').show();
+        $(id+'_zero').hide();
+      }else if (input.val() == -1){
+        //change to 0
+        input.val(0);
+        $(id+'_up').hide();
+        $(id+'_down').hide();
+        $(id+'_zero').show();
+      }else{
+        input.val(1);
+        $(id+'_up').show();
+        $(id+'_down').hide();
+        $(id+'_zero').hide();
+      }
+
+    });
+  </script>
+<% end %>

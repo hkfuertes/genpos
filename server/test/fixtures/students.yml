@@ -1,253 +1,750 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-r3:
+student_3:
   id: 3
   name: Maggie
   last_name: Mclean
-  birthday: '2018-08-17T03:20:01 -02:00'
-r4:
+  birthday: 2006-03-27
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_4:
   id: 4
   name: Barlow
   last_name: Gonzales
-  birthday: '2008-02-21T04:16:43 -01:00'
-r5:
+  birthday: 2006-07-27
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_5:
   id: 5
   name: Olga
   last_name: Pratt
-  birthday: '2014-10-12T07:59:33 -02:00'
-r6:
+  birthday: 2006-07-27
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_6:
   id: 6
   name: Bartlett
   last_name: Wheeler
-  birthday: '2013-05-08T11:46:56 -02:00'
-r7:
+  birthday: 2006-12-27
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_7:
   id: 7
   name: Glass
   last_name: Buckley
-  birthday: '2013-10-23T11:16:07 -02:00'
-r8:
+  birthday: 2006-07-27
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_8:
   id: 8
   name: Avis
   last_name: Gomez
-  birthday: '2000-06-30T03:44:41 -02:00'
-r9:
+  birthday: 2006-12-12
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_9:
   id: 9
   name: Long
   last_name: Cherry
-  birthday: '2020-05-13T01:32:24 -02:00'
-r10:
+  birthday: 2006-12-12
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_10:
   id: 10
   name: Kathryn
   last_name: Rose
-  birthday: '2009-07-29T03:23:15 -02:00'
-r11:
+  birthday: 2006-07-12
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_11:
   id: 11
   name: Amparo
   last_name: Ramirez
-  birthday: '2010-07-29T10:12:01 -02:00'
-r12:
+  birthday: 2006-03-12
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_12:
   id: 12
   name: Paulette
   last_name: Marsh
-  birthday: '2013-08-03T03:13:30 -02:00'
-r13:
+  birthday: 2006-12-12
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_13:
   id: 13
   name: Kaufman
   last_name: Briggs
-  birthday: '2008-06-19T06:44:19 -02:00'
-r14:
+  birthday: 2006-07-12
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_14:
   id: 14
   name: Margarita
   last_name: Willis
-  birthday: '2004-11-20T06:02:17 -01:00'
-r15:
+  birthday: 2006-12-12
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_15:
   id: 15
   name: Lyons
   last_name: Miles
-  birthday: '2020-12-29T08:07:39 -01:00'
-r16:
+  birthday: 2006-04-12
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_16:
   id: 16
   name: Rhonda
   last_name: Payne
-  birthday: '2018-09-09T11:06:20 -02:00'
-r17:
+  birthday: 2006-04-12
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_17:
   id: 17
   name: Mcclure
   last_name: Sims
-  birthday: '2004-06-06T05:25:14 -02:00'
-r18:
+  birthday: 2006-07-23
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_18:
   id: 18
   name: Tania
   last_name: Hogan
-  birthday: '2008-09-18T11:04:17 -02:00'
-r19:
+  birthday: 2006-04-23
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_19:
   id: 19
   name: Geraldine
   last_name: Kaufman
-  birthday: '2004-06-11T01:05:11 -02:00'
-r20:
+  birthday: 2006-04-23
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_20:
   id: 20
   name: Rachael
   last_name: Holcomb
-  birthday: '2012-08-01T04:37:20 -02:00'
-r21:
+  birthday: 2006-05-08
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_21:
   id: 21
   name: Callie
   last_name: Sanders
-  birthday: '2009-10-09T08:47:03 -02:00'
-r22:
+  birthday: 2006-05-08
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_22:
   id: 22
   name: Blackwell
   last_name: Franco
-  birthday: '2007-07-28T01:50:28 -02:00'
-r23:
+  birthday: 2006-01-08
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_23:
   id: 23
   name: Prince
   last_name: Dejesus
-  birthday: '2016-01-13T02:21:48 -01:00'
-r24:
+  birthday: 2006-07-08
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_24:
   id: 24
   name: Cantu
   last_name: Delgado
-  birthday: '2013-03-14T12:47:07 -01:00'
-r25:
+  birthday: 2006-01-08
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_25:
   id: 25
   name: Felicia
   last_name: Sawyer
-  birthday: '2011-03-31T04:58:12 -02:00'
-r26:
+  birthday: 2006-12-10
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_26:
   id: 26
   name: Allison
   last_name: Hopper
-  birthday: '2000-02-17T08:14:48 -01:00'
-r27:
+  birthday: 2006-12-10
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_27:
   id: 27
   name: Hyde
   last_name: Duncan
-  birthday: '2006-01-06T10:35:49 -01:00'
-r28:
+  birthday: 2006-12-10
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_28:
   id: 28
   name: Kemp
   last_name: Owens
-  birthday: '2005-01-25T12:08:08 -01:00'
-r29:
+  birthday: 2006-07-10
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_29:
   id: 29
   name: Sheryl
   last_name: Dixon
-  birthday: '2016-01-30T10:22:11 -01:00'
-r30:
+  birthday: 2006-12-03
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_30:
   id: 30
   name: Good
   last_name: Branch
-  birthday: '2002-05-08T12:55:19 -02:00'
-r31:
+  birthday: 2006-12-03
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_31:
   id: 31
   name: Rosalie
   last_name: Trevino
-  birthday: '2015-06-11T08:30:59 -02:00'
-r32:
+  birthday: 2006-01-03
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_32:
   id: 32
   name: Clark
   last_name: Cameron
-  birthday: '2014-07-01T10:41:23 -02:00'
-r33:
+  birthday: 2006-01-03
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_33:
   id: 33
   name: Roxanne
   last_name: Valentine
-  birthday: '2006-11-25T07:57:20 -01:00'
-r34:
+  birthday: 2006-09-17
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_34:
   id: 34
   name: Lorene
   last_name: Drake
-  birthday: '2020-12-19T03:08:38 -01:00'
-r35:
+  birthday: 2006-09-17
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_35:
   id: 35
   name: Gamble
   last_name: Wallace
-  birthday: '2016-04-01T09:58:33 -02:00'
-r36:
+  birthday: 2006-09-17
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_36:
   id: 36
   name: Hilda
   last_name: Harper
-  birthday: '2022-05-04T10:20:30 -02:00'
-r37:
+  birthday: 2006-07-17
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_37:
   id: 37
   name: Maria
   last_name: Jackson
-  birthday: '2005-12-04T09:22:40 -01:00'
-r38:
+  birthday: 2006-12-17
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_38:
   id: 38
   name: Shepard
   last_name: Dickson
-  birthday: '2001-02-13T08:10:17 -01:00'
-r39:
+  birthday: 2006-12-04
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_39:
   id: 39
   name: Amie
   last_name: Key
-  birthday: '2010-09-20T10:42:13 -02:00'
-r40:
+  birthday: 2006-12-04
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_40:
   id: 40
   name: Head
   last_name: Compton
-  birthday: '2019-10-16T08:05:55 -02:00'
-r41:
+  birthday: 2006-11-04
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_41:
   id: 41
   name: Molina
   last_name: Davis
-  birthday: '2022-07-15T06:20:05 -02:00'
-r42:
+  birthday: 2006-11-01
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_42:
   id: 42
   name: Judith
   last_name: Howe
-  birthday: '2017-06-27T12:52:27 -02:00'
-r43:
+  birthday: 2006-07-01
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_43:
   id: 43
   name: Tina
   last_name: Snow
-  birthday: '2005-11-21T07:42:59 -01:00'
-r44:
+  birthday: 2006-11-01
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_44:
   id: 44
   name: Hogan
   last_name: Kemp
-  birthday: '2001-11-07T02:29:04 -01:00'
-r45:
+  birthday: 2006-11-01
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_45:
   id: 45
   name: Winters
   last_name: Blackburn
-  birthday: '2001-04-11T07:32:54 -02:00'
-r46:
+  birthday: 2006-12-01
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_46:
   id: 46
   name: Camille
   last_name: Davenport
-  birthday: '2001-07-26T10:50:17 -02:00'
-r47:
+  birthday: 2006-12-05
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_47:
   id: 47
   name: Oneill
   last_name: Santana
-  birthday: '2017-05-24T12:48:37 -02:00'
-r48:
+  birthday: 2006-07-05
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_48:
   id: 48
   name: Brandi
   last_name: Bailey
-  birthday: '2012-03-11T09:34:17 -01:00'
-r49:
+  birthday: 2006-03-05
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_49:
   id: 49
   name: Mccullough
   last_name: Baird
-  birthday: '2011-05-04T07:25:59 -02:00'
-r50:
+  birthday: 2006-03-05
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_50:
   id: 50
   name: Amy
   last_name: Kinney
-  birthday: '2014-09-09T08:02:37 -02:00'
-r51:
+  birthday: 2006-03-05
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_51:
   id: 51
   name: Debra
   last_name: Curry
-  birthday: '2014-02-03T06:23:51 -01:00'
-r52:
+  birthday: 2006-07-05
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z
+
+student_52:
   id: 52
   name: Thomas
   last_name: Booker
-  birthday: '2015-01-10T06:08:38 -01:00'
-
+  birthday: 2006-03-27
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.480853000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.480853000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.480853000 Z

@@ -1,64 +1,48 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  id: 1
-  level: 1º ESO
-  letter: A
-  subject: Física
-  teacher_id: 1
-two:
-  id: 2
-  level: 2º ESO
-  letter: B
-  subject: Lengua
-r0:
+classroom_0:
   id: 0
   level: 4º ESO
-  letter: B
-  subject: Lengua
-r10:
-  id: 10
-  level: 1º ESO
-  letter: B
-  subject: Matemáticas
-  teacher_id: 1
-r11:
-  id: 11
-  level: 1º ESO
-  letter: C
-  subject: Matemáticas
-  teacher_id: 1
-r3:
-  id: 3
-  level: 4º ESO
   letter: A
   subject: Lengua
-r4:
-  id: 4
-  level: 3º ESO
-  letter: B
-  subject: Biología
-r6:
-  id: 6
-  level: 1º ESO
-  letter: A
-  subject: Tecnología
-  teacher_id: 1
-r7:
-  id: 7
-  level: 2º ESO
-  letter: C
-  subject: Matemáticas
-  teacher_id: 1
-r8:
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.479113000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.479113000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.479113000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.479113000 Z
+  teacher_id: 
+
+classroom_8:
   id: 8
   level: 4º ESO
   letter: A
   subject: Informática
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.479113000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:33:49.479113000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:33:49.479113000 Z
+    zone: *1
+    time: 2022-08-13 18:33:49.479113000 Z
   teacher_id: 1
-r9:
-  id: 9
-  level: 1º ESO
-  letter: A
-  subject: Lengua
 
+classroom_11:
+  id: 11
+  level: 4º ESO
+  letter: B
+  subject: Informática
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:42:20.032791000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 18:42:20.032791000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 18:42:20.032791000 Z
+    zone: *1
+    time: 2022-08-13 18:42:20.032791000 Z
+  teacher_id: 1

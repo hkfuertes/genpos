@@ -111,9 +111,6 @@ GEM
     io-console (0.5.11)
     irb (1.4.1)
       reline (>= 0.3.0)
-    jbuilder (2.11.5)
-      actionview (>= 5.0.0)
-      activesupport (>= 5.0.0)
     loofah (2.18.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -235,7 +232,6 @@ DEPENDENCIES
   capybara
   debug
   devise (~> 4.8, >= 4.8.1)
-  jbuilder
   mysql2 (~> 0.5)
   puma (~> 5.0)
   rails (~> 7.0.3)

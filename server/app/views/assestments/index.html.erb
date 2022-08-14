@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body table-responsive p-0">
+        <table class="table table-hover text-nowrap">
+          <thead>
+            <tr>
+              <th>Curso</th>
+              <th>Asignatura</th>
+              <th>Lider(es)</th>
+              <th>Rechazado(s)</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+              <% current_teacher.classrooms.each do |classroom| %>
+              <% popular, rejected = Assestment.calculate_insights(classroom) %>
+              <tr>
+                <td><%= classroom.level %> <%= classroom.letter %></td>
+                <td><%= classroom.subject %></td>
+                <td><%= Student.find(popular).map(&:name).join(", ") %> </td>
+                <td><%= Student.find(rejected).map(&:name).join(", ") %> </td>
+                <td>
+                  <div class="float-right">
+                    <a href="<%= edit_assestment_path(classroom: classroom.id) %>" class="text-dark"><i class="fas fa-edit"></i></a>
+                  </div>
+                </td>
+              </tr>
+            <%end%>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<%# =================================== %>
+<% content_for :title do %>
+  Mis Tests Sociométricos
+<% end %>
+<% content_for :breadcrumb do %>
+  <%= render :partial => "layouts/breadcrumb", locals: {path: [{path: root_path, name: "Inicio"}], current: "Mis Tests"} %>
+<% end %>

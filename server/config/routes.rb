@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  constraints :format => "html" do
+  constraints format: 'html' do
     devise_for :teachers, skip: %i[sessions registrations passwords]
 
     devise_scope :teacher do
@@ -25,6 +25,10 @@ Rails.application.routes.draw do
 
     resources :classrooms
     resources :students
+    #resources :assestments
+    get '/assestments', to: 'assestments#index', as: :assestments
+    get '/assestment/C:classroom', to: 'assestments#edit', as: :edit_assestment
+    put '/assestment/C:classroom', to: 'assestments#update', as: :update_assestment
   end
   root to: 'home#index'
 end
