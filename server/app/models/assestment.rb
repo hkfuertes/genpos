@@ -3,10 +3,11 @@ class Assestment < ApplicationRecord
   belongs_to :student
 
   # classroom_id, student_id, { id => val }
-  def self.calculate_insights(assestments)
-    return [[],[]]
-    values = digest_assestments assestments.to_h { |a| a[:assestments] }.flatten
-    positive_mean, negative_mean, impact = calculate_means values
+  def self.calculate_insights(classroom)
+    values = digest_assestments extract_assestments(classroom.assestment)
+    return [[], []] if values.empty?
+
+    positive_mean, negative_mean, impact = calculate_means(values, classroom.students.count)
 
     # Popular (>= impact) && (<= negative_mean)
     popular = values.select do |_, value|
@@ -23,23 +24,32 @@ class Assestment < ApplicationRecord
     [popular, rejected]
   end
 
+  def self.extract_assestments(assestments)
+    assestments.map { |a| JSON.parse a[:assestments] }
+  end
+
   def self.digest_assestments(assestments)
     return {} if assestments.nil?
 
+    # [{ id: 1, id2: -1 }, {id: -1, id2: 1}]
     # { id: {positives: 5, negatives: 4}}
     values = {}
-    assestments.each do |id, value|
-      values[id][:positives] += 1 if value == 1
-      values[id][:negatives] += 1 if value == -1
+    assestments.each do |el|
+      el.each do |id, value|
+        values[id] = { positives: 0, negatives: 0 } unless values.key? id
+        values[id][:positives] += 1 if value.to_i == 1
+        values[id][:negatives] += 1 if value.to_i == -1
+      end
     end
     values
   end
 
-  def self.calculate_means(digested)
+  def self.calculate_means(digested, count)
     return [0, 0, 0] if digested.empty?
 
-    positive_mean = digested.reduce(0) { |memo, value| memo + value[:positives] } / assestments.count
-    negative_mean = digested.reduce(0) { |memo, value| memo + value[:negatives] } / assestments.count
+    # Change count with classroom#
+    positive_mean = digested.map { |_, v| v[:positives] }.sum / count
+    negative_mean = digested.map { |_, v| v[:negatives] }.sum / count
     impact = positive_mean + negative_mean
 
     [positive_mean, negative_mean, impact]

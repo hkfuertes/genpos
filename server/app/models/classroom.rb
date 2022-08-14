@@ -4,5 +4,5 @@ class Classroom < ApplicationRecord
 
   belongs_to :teacher
 
-  has_one :assestment
+  has_many :assestment
 end

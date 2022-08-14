@@ -7,16 +7,19 @@
             <tr>
               <th>Curso</th>
               <th>Asignatura</th>
-              <th>Lider</th>
+              <th>Lider(es)</th>
+              <th>Olvidado(s)</th>
               <th></th>
             </tr>
           </thead>
           <tbody>
               <% current_teacher.classrooms.each do |classroom| %>
+              <% popular, rejected = Assestment.calculate_insights(classroom) %>
               <tr>
                 <td><%= classroom.level %> <%= classroom.letter %></td>
                 <td><%= classroom.subject %></td>
-                <td><%= Assestment.calculate_insights(classroom.assestment)[0].join(",") %> </td>
+                <td><%= Student.find(popular).map(&:name).join(", ") %> </td>
+                <td><%= Student.find(rejected).map(&:name).join(", ") %> </td>
                 <td>
                   <div class="float-right">
                     <a href="<%= edit_assestment_path(classroom: classroom.id) %>" class="text-dark"><i class="fas fa-edit"></i></a>
