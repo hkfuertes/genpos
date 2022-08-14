@@ -1,0 +1,750 @@
+
+assestment_1:
+  id: 1
+  classroom_id: 8
+  student_id: 4
+  assestments: '{"7":"1","9":"0","27":"0","32":"0","34":"-1"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 23:25:40.315944000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 23:25:40.315944000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:32:08.733586000 Z
+    zone: *1
+    time: 2022-08-14 13:32:08.733586000 Z
+
+assestment_2:
+  id: 2
+  classroom_id: 8
+  student_id: 5
+  assestments: '{"9":"1","27":"-1","32":"1"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 23:25:40.315944000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-13 23:25:40.315944000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-13 23:25:40.315944000 Z
+    zone: *1
+    time: 2022-08-13 23:25:40.315944000 Z
+
+assestment_3:
+  id: 3
+  classroom_id: 8
+  student_id: 7
+  assestments: '{"4":"0","8":"1","46":"-1"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 12:10:15.341238000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 12:10:15.341238000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:32:08.738610000 Z
+    zone: *1
+    time: 2022-08-14 13:32:08.738610000 Z
+
+assestment_4:
+  id: 4
+  classroom_id: 8
+  student_id: 8
+  assestments: '{"7":"1","24":"-1","46":"0"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 12:10:34.003814000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 12:10:34.003814000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:32:08.742901000 Z
+    zone: *1
+    time: 2022-08-14 13:32:08.742901000 Z
+
+assestment_5:
+  id: 5
+  classroom_id: 8
+  student_id: 9
+  assestments: '{"7":"1","36":"-1","46":"0"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 12:10:34.007305000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 12:10:34.007305000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:32:08.747093000 Z
+    zone: *1
+    time: 2022-08-14 13:32:08.747093000 Z
+
+assestment_6:
+  id: 6
+  classroom_id: 8
+  student_id: 13
+  assestments: '{"7":"1","36":"-1","46":"0"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 12:10:34.010368000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 12:10:34.010368000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:32:08.750744000 Z
+    zone: *1
+    time: 2022-08-14 13:32:08.750744000 Z
+
+assestment_7:
+  id: 7
+  classroom_id: 8
+  student_id: 18
+  assestments: '{"7":"1","36":"-1","46":"0"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 12:10:34.013270000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 12:10:34.013270000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:32:08.754696000 Z
+    zone: *1
+    time: 2022-08-14 13:32:08.754696000 Z
+
+assestment_8:
+  id: 8
+  classroom_id: 8
+  student_id: 20
+  assestments: '{"13":"-1","36":"1","46":"0"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 12:10:34.016163000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 12:10:34.016163000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:32:08.759035000 Z
+    zone: *1
+    time: 2022-08-14 13:32:08.759035000 Z
+
+assestment_9:
+  id: 9
+  classroom_id: 8
+  student_id: 22
+  assestments: '{"13":"-1","36":"1","46":"0"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 12:10:34.019661000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 12:10:34.019661000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:32:08.763204000 Z
+    zone: *1
+    time: 2022-08-14 13:32:08.763204000 Z
+
+assestment_10:
+  id: 10
+  classroom_id: 8
+  student_id: 23
+  assestments: '{"13":"-1","36":"1"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 12:10:34.022563000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 12:10:34.022563000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:32:08.766833000 Z
+    zone: *1
+    time: 2022-08-14 13:32:08.766833000 Z
+
+assestment_11:
+  id: 11
+  classroom_id: 8
+  student_id: 24
+  assestments: '{"13":"-1","36":"1"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 12:10:34.025523000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 12:10:34.025523000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:32:08.771202000 Z
+    zone: *1
+    time: 2022-08-14 13:32:08.771202000 Z
+
+assestment_12:
+  id: 12
+  classroom_id: 11
+  student_id: 11
+  assestments: '{"3":"1","21":"-1"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 12:16:22.198302000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 12:16:22.198302000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:33:57.558510000 Z
+    zone: *1
+    time: 2022-08-14 13:33:57.558510000 Z
+
+assestment_13:
+  id: 13
+  classroom_id: 11
+  student_id: 12
+  assestments: '{"3":"1","17":"-1"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 12:16:22.207820000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 12:16:22.207820000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:33:57.563232000 Z
+    zone: *1
+    time: 2022-08-14 13:33:57.563232000 Z
+
+assestment_14:
+  id: 14
+  classroom_id: 11
+  student_id: 14
+  assestments: '{"3":"1","17":"-1"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 12:16:22.211369000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 12:16:22.211369000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:33:57.567840000 Z
+    zone: *1
+    time: 2022-08-14 13:33:57.567840000 Z
+
+assestment_15:
+  id: 15
+  classroom_id: 11
+  student_id: 15
+  assestments: '{"3":"1","17":"-1"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 12:16:22.215841000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 12:16:22.215841000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:33:57.575312000 Z
+    zone: *1
+    time: 2022-08-14 13:33:57.575312000 Z
+
+assestment_16:
+  id: 16
+  classroom_id: 11
+  student_id: 16
+  assestments: '{"17":"1","37":"-1"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 12:16:22.218974000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 12:16:22.218974000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 12:16:22.218974000 Z
+    zone: *1
+    time: 2022-08-14 12:16:22.218974000 Z
+
+assestment_17:
+  id: 17
+  classroom_id: 11
+  student_id: 17
+  assestments: '{"5":"1","37":"-1"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 12:16:22.223526000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 12:16:22.223526000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:33:57.588721000 Z
+    zone: *1
+    time: 2022-08-14 13:33:57.588721000 Z
+
+assestment_18:
+  id: 18
+  classroom_id: 11
+  student_id: 19
+  assestments: '{"3":"1","37":"-1"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 12:16:22.227021000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 12:16:22.227021000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 12:16:22.227021000 Z
+    zone: *1
+    time: 2022-08-14 12:16:22.227021000 Z
+
+assestment_19:
+  id: 19
+  classroom_id: 11
+  student_id: 21
+  assestments: '{"3":"0","17":"1","37":"-1"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 12:16:22.230445000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 12:16:22.230445000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:33:57.597301000 Z
+    zone: *1
+    time: 2022-08-14 13:33:57.597301000 Z
+
+assestment_20:
+  id: 20
+  classroom_id: 11
+  student_id: 25
+  assestments: '{"17":"1","37":"-1"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 12:16:22.233196000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 12:16:22.233196000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 12:16:22.233196000 Z
+    zone: *1
+    time: 2022-08-14 12:16:22.233196000 Z
+
+assestment_21:
+  id: 21
+  classroom_id: 11
+  student_id: 26
+  assestments: '{"14":"1","37":"-1"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 12:16:22.237064000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 12:16:22.237064000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:33:57.606357000 Z
+    zone: *1
+    time: 2022-08-14 13:33:57.606357000 Z
+
+assestment_22:
+  id: 22
+  classroom_id: 11
+  student_id: 28
+  assestments: '{"14":"1","37":"-1"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 12:16:22.241286000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 12:16:22.241286000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:33:57.612617000 Z
+    zone: *1
+    time: 2022-08-14 13:33:57.612617000 Z
+
+assestment_23:
+  id: 23
+  classroom_id: 11
+  student_id: 31
+  assestments: '{"17":"1","37":"-1"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 12:16:22.244310000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 12:16:22.244310000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 12:16:22.244310000 Z
+    zone: *1
+    time: 2022-08-14 12:16:22.244310000 Z
+
+assestment_24:
+  id: 24
+  classroom_id: 11
+  student_id: 33
+  assestments: '{"17":"1","37":"-1"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 12:16:22.247121000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 12:16:22.247121000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 12:16:22.247121000 Z
+    zone: *1
+    time: 2022-08-14 12:16:22.247121000 Z
+
+assestment_25:
+  id: 25
+  classroom_id: 11
+  student_id: 35
+  assestments: '{"17":"1","37":"-1"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 12:16:22.249994000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 12:16:22.249994000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 12:16:22.249994000 Z
+    zone: *1
+    time: 2022-08-14 12:16:22.249994000 Z
+
+assestment_26:
+  id: 26
+  classroom_id: 11
+  student_id: 37
+  assestments: '{"17":"1","42":"-1"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 12:16:22.252625000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 12:16:22.252625000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:33:57.624889000 Z
+    zone: *1
+    time: 2022-08-14 13:33:57.624889000 Z
+
+assestment_27:
+  id: 27
+  classroom_id: 8
+  student_id: 27
+  assestments: '{"13":"-1","23":"1"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:32:08.775378000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 13:32:08.775378000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:32:08.775378000 Z
+    zone: *1
+    time: 2022-08-14 13:32:08.775378000 Z
+
+assestment_28:
+  id: 28
+  classroom_id: 8
+  student_id: 29
+  assestments: '{"13":"-1","23":"1"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:32:08.780817000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 13:32:08.780817000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:32:08.780817000 Z
+    zone: *1
+    time: 2022-08-14 13:32:08.780817000 Z
+
+assestment_29:
+  id: 29
+  classroom_id: 8
+  student_id: 30
+  assestments: '{"13":"-1","23":"1"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:32:08.787013000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 13:32:08.787013000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:32:08.787013000 Z
+    zone: *1
+    time: 2022-08-14 13:32:08.787013000 Z
+
+assestment_30:
+  id: 30
+  classroom_id: 8
+  student_id: 32
+  assestments: '{"20":"-1","27":"1","38":"0"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:32:08.792393000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 13:32:08.792393000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:32:08.792393000 Z
+    zone: *1
+    time: 2022-08-14 13:32:08.792393000 Z
+
+assestment_31:
+  id: 31
+  classroom_id: 8
+  student_id: 34
+  assestments: '{"27":"1","46":"-1"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:32:08.800632000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 13:32:08.800632000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:32:08.800632000 Z
+    zone: *1
+    time: 2022-08-14 13:32:08.800632000 Z
+
+assestment_32:
+  id: 32
+  classroom_id: 8
+  student_id: 36
+  assestments: '{"27":"1","46":"-1"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:32:08.804560000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 13:32:08.804560000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:32:08.804560000 Z
+    zone: *1
+    time: 2022-08-14 13:32:08.804560000 Z
+
+assestment_33:
+  id: 33
+  classroom_id: 8
+  student_id: 38
+  assestments: '{"27":"1","46":"-1"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:32:08.808301000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 13:32:08.808301000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:32:08.808301000 Z
+    zone: *1
+    time: 2022-08-14 13:32:08.808301000 Z
+
+assestment_34:
+  id: 34
+  classroom_id: 8
+  student_id: 40
+  assestments: '{"27":"1","46":"-1"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:32:08.813901000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 13:32:08.813901000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:32:08.813901000 Z
+    zone: *1
+    time: 2022-08-14 13:32:08.813901000 Z
+
+assestment_35:
+  id: 35
+  classroom_id: 8
+  student_id: 41
+  assestments: '{"29":"1","46":"-1"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:32:08.819623000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 13:32:08.819623000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:32:08.819623000 Z
+    zone: *1
+    time: 2022-08-14 13:32:08.819623000 Z
+
+assestment_36:
+  id: 36
+  classroom_id: 8
+  student_id: 45
+  assestments: '{"27":"1","46":"-1"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:32:08.825707000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 13:32:08.825707000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:32:08.825707000 Z
+    zone: *1
+    time: 2022-08-14 13:32:08.825707000 Z
+
+assestment_37:
+  id: 37
+  classroom_id: 8
+  student_id: 48
+  assestments: '{"30":"1","38":"-1"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:32:08.831203000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 13:32:08.831203000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:32:08.831203000 Z
+    zone: *1
+    time: 2022-08-14 13:32:08.831203000 Z
+
+assestment_38:
+  id: 38
+  classroom_id: 8
+  student_id: 49
+  assestments: '{"30":"1","38":"-1"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:32:08.837080000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 13:32:08.837080000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:32:08.837080000 Z
+    zone: *1
+    time: 2022-08-14 13:32:08.837080000 Z
+
+assestment_39:
+  id: 39
+  classroom_id: 8
+  student_id: 51
+  assestments: '{"30":"1","38":"-1"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:32:08.843821000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 13:32:08.843821000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:32:08.843821000 Z
+    zone: *1
+    time: 2022-08-14 13:32:08.843821000 Z
+
+assestment_40:
+  id: 40
+  classroom_id: 8
+  student_id: 52
+  assestments: '{"30":"1","38":"-1"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:32:08.850104000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 13:32:08.850104000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:32:08.850104000 Z
+    zone: *1
+    time: 2022-08-14 13:32:08.850104000 Z
+
+assestment_41:
+  id: 41
+  classroom_id: 11
+  student_id: 3
+  assestments: '{"5":"1","26":"-1"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:33:57.537353000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 13:33:57.537353000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:33:57.537353000 Z
+    zone: *1
+    time: 2022-08-14 13:33:57.537353000 Z
+
+assestment_42:
+  id: 42
+  classroom_id: 11
+  student_id: 5
+  assestments: '{"6":"1","26":"-1"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:33:57.546405000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 13:33:57.546405000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:33:57.546405000 Z
+    zone: *1
+    time: 2022-08-14 13:33:57.546405000 Z
+
+assestment_43:
+  id: 43
+  classroom_id: 11
+  student_id: 6
+  assestments: '{"3":"1","26":"-1"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:33:57.550134000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 13:33:57.550134000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:33:57.550134000 Z
+    zone: *1
+    time: 2022-08-14 13:33:57.550134000 Z
+
+assestment_44:
+  id: 44
+  classroom_id: 11
+  student_id: 10
+  assestments: '{"5":"1","21":"-1"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:33:57.554327000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 13:33:57.554327000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:33:57.554327000 Z
+    zone: *1
+    time: 2022-08-14 13:33:57.554327000 Z
+
+assestment_45:
+  id: 45
+  classroom_id: 11
+  student_id: 39
+  assestments: '{"15":"1","42":"-1"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:33:57.630737000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 13:33:57.630737000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:33:57.630737000 Z
+    zone: *1
+    time: 2022-08-14 13:33:57.630737000 Z
+
+assestment_46:
+  id: 46
+  classroom_id: 11
+  student_id: 42
+  assestments: '{"15":"1","37":"-1"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:33:57.635660000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 13:33:57.635660000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:33:57.635660000 Z
+    zone: *1
+    time: 2022-08-14 13:33:57.635660000 Z
+
+assestment_47:
+  id: 47
+  classroom_id: 11
+  student_id: 43
+  assestments: '{"15":"1","42":"-1"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:33:57.639540000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 13:33:57.639540000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:33:57.639540000 Z
+    zone: *1
+    time: 2022-08-14 13:33:57.639540000 Z
+
+assestment_48:
+  id: 48
+  classroom_id: 11
+  student_id: 44
+  assestments: '{"15":"1","42":"-1"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:33:57.642841000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 13:33:57.642841000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:33:57.642841000 Z
+    zone: *1
+    time: 2022-08-14 13:33:57.642841000 Z
+
+assestment_49:
+  id: 49
+  classroom_id: 11
+  student_id: 47
+  assestments: '{"15":"1","42":"-1"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:33:57.645782000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 13:33:57.645782000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:33:57.645782000 Z
+    zone: *1
+    time: 2022-08-14 13:33:57.645782000 Z
+
+assestment_50:
+  id: 50
+  classroom_id: 11
+  student_id: 50
+  assestments: '{"15":"1","42":"-1"}'
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:33:57.648676000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-08-14 13:33:57.648676000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-08-14 13:33:57.648676000 Z
+    zone: *1
+    time: 2022-08-14 13:33:57.648676000 Z
