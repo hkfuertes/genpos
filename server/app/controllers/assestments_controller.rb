@@ -8,15 +8,18 @@ class AssestmentsController < ApplicationController
 
   def show; end
 
-  def edit; end
+  def edit
+    @prep_assest = @assestments.map do |value|
+      [
+        value.student.id,
+        JSON.parse(value.assestments).transform_keys(&:to_i).transform_values(&:to_i)
+      ]
+    end.to_h
+  end
 
   def update
     @assestments.each do |key, assestment|
-      student = Student.find(key.delete_prefix('S').to_i)
-      values = {
-        classroom: @classroom, student:,
-        assestments: assestment.to_json
-      }
+      values = create_value_set(key, assestment)
       current_assestment = Assestment.where(values.except(:assestments))
       if current_assestment.nil?
         current_assestment = Assestment.new(values)
@@ -29,6 +32,14 @@ class AssestmentsController < ApplicationController
   end
 
   private
+
+  def create_value_set(student_id, assestment)
+    student = Student.find(student_id.delete_prefix('S').to_i)
+    {
+      classroom: @classroom, student:,
+      assestments: assestment.to_json
+    }
+  end
 
   def set_update_assestments
     @assestments = params[:assestment].to_h.transform_values do |value|
