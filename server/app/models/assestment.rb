@@ -7,7 +7,8 @@ class Assestment < ApplicationRecord
     values = digest_assestments extract_assestments(classroom.assestment)
     return [[], []] if values.empty?
 
-    positive_mean, negative_mean, impact = calculate_means(values, classroom.students.count)
+    # TODO: Check the mean count, wich one to use?
+    positive_mean, negative_mean, impact = calculate_means(values, classroom.assestment.count)
 
     # Popular (>= impact) && (<= negative_mean)
     popular = values.select do |_, value|
@@ -48,8 +49,8 @@ class Assestment < ApplicationRecord
     return [0, 0, 0] if digested.empty?
 
     # Change count with classroom#
-    positive_mean = digested.map { |_, v| v[:positives] }.sum / count
-    negative_mean = digested.map { |_, v| v[:negatives] }.sum / count
+    positive_mean = digested.map { |_, v| v[:positives] }.sum.fdiv(count)
+    negative_mean = digested.map { |_, v| v[:negatives] }.sum.fdiv(count)
     impact = positive_mean + negative_mean
 
     [positive_mean, negative_mean, impact]

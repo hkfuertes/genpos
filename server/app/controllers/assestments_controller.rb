@@ -21,7 +21,7 @@ class AssestmentsController < ApplicationController
     @assestments.each do |key, assestment|
       values = create_value_set(key, assestment)
       current_assestment = Assestment.where(values.except(:assestments))
-      if current_assestment.nil?
+      if current_assestment.empty?
         current_assestment = Assestment.new(values)
         current_assestment.save
       else
