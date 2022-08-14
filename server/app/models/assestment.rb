@@ -5,31 +5,53 @@ class Assestment < ApplicationRecord
   # classroom_id, student_id, { id => val }
   def self.calculate_insights(classroom)
     values = digest_assestments extract_assestments(classroom.assestment)
-    return [[], []] if values.empty?
+    return [[], [], []] if values.empty?
 
     # TODO: Check the mean count, wich one to use?
-    positive_mean, negative_mean, impact = calculate_means(values, classroom.assestment.count)
+    # Ideally both counts should be equal, for now, assestment count for pretier resutls
+    avgs = calculate_avgs(values, classroom.assestment.count)
 
-    # Popular (>= impact) && (<= negative_mean)
-    popular = values.select do |_, value|
-      value[:positives] >= impact &&
-        value[:negatives] <= negative_mean
-    end.keys
+    popular = select_popular(values, avgs)
+    rejected = select_rejected(values, avgs)
+    ignored = select_ignored(values, avgs)
 
-    # Rejected (<= positive_mean) && (>= impact)
-    rejected = values.select do |_, value|
-      value[:positives] <= positive_mean &&
-        value[:negatives] >= impact
-    end.keys
-
-    [popular, rejected]
+    [popular, rejected, ignored]
   end
 
-  def self.extract_assestments(assestments)
+  private_class_method def self.select_popular(values, avgs)
+    _, negative_avg, impact = avgs
+
+    # Popular (>= impact) && (<= negative_avg)
+    values.select do |_, value|
+      value[:positives] >= impact &&
+        value[:negatives] <= negative_avg
+    end.keys
+  end
+
+  private_class_method def self.select_rejected(values, avgs)
+    positive_avg, _, impact = avgs
+
+    # Rejected (<= positive_avg) && (>= impact)
+    values.select do |_, value|
+      value[:positives] <= positive_avg &&
+        value[:negatives] >= impact
+    end.keys
+  end
+
+  private_class_method def self.select_ignored(values, avgs)
+    _, _, impact = avgs
+
+    # Ignored (sum <= impact)
+    values.select do |_, value|
+      value[:positives] + value[:negatives] <= impact
+    end.keys
+  end
+
+  private_class_method def self.extract_assestments(assestments)
     assestments.map { |a| JSON.parse a[:assestments] }
   end
 
-  def self.digest_assestments(assestments)
+  private_class_method def self.digest_assestments(assestments)
     return {} if assestments.nil?
 
     # [{ id: 1, id2: -1 }, {id: -1, id2: 1}]
@@ -45,14 +67,14 @@ class Assestment < ApplicationRecord
     values
   end
 
-  def self.calculate_means(digested, count)
+  private_class_method def self.calculate_avgs(digested, count)
     return [0, 0, 0] if digested.empty?
 
     # Change count with classroom#
-    positive_mean = digested.map { |_, v| v[:positives] }.sum.fdiv(count)
-    negative_mean = digested.map { |_, v| v[:negatives] }.sum.fdiv(count)
-    impact = positive_mean + negative_mean
+    positive_avg = digested.map { |_, v| v[:positives] }.sum.fdiv(count)
+    negative_avg = digested.map { |_, v| v[:negatives] }.sum.fdiv(count)
+    impact = positive_avg + negative_avg
 
-    [positive_mean, negative_mean, impact]
+    [positive_avg, negative_avg, impact]
   end
 end
