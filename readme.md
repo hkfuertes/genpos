@@ -4,7 +4,7 @@ Este es el repositorio donde se aloja la herramienta, asi como la documentación
 - La carpeta **server** contiene realmente el codigo. Esta escrito en Ruby on Rails.
 
 ### Funcionamiento
-Para levantar el entorno basta con rellenar el siguiente fichero (`.env.dist`) con los valores apropiados:
+Para levantar el entorno basta con rellenar el siguiente fichero (`.env.dist`) con los valores apropiados, y guardarlo en un fichero `.env` sin el ".dist" del final:
 ```env
 MYSQLHOST=database
 MYSQLUSER=root
