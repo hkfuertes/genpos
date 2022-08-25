@@ -1,10 +1,10 @@
 ## Herramienta de ayuda a la generadion de grupos en el aula: Test Sociométricos
 Este es el repositorio donde se aloja la herramienta, asi como la documentación:
-- (Aquí)[doc/tfm_mfp19.pdf] puedes ver el trabajo escrito.
+- [Aquí](doc/tfm_mfp19.pdf) puedes ver el trabajo escrito.
 - La carpeta **server** contiene realmente el codigo. Esta escrito en Ruby on Rails.
 
 ### Funcionamiento
-Para levantar el entorno basta con rellenar el siguiente fichero (`.env.dist`) con los valores apropiados, y guardarlo en un fichero `.env` sin el ".dist" del final:
+Para levantar el entorno basta con rellenar el siguiente fichero (`.env.dist`) con los valores apropiados, y guardarlo en un fichero `.env` sin el _".dist"_ del final:
 ```env
 MYSQLHOST=database
 MYSQLUSER=root
