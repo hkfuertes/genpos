@@ -3,7 +3,6 @@ version: '2'
 services:
   database:
     image: ghcr.io/linuxserver/mariadb
-    container_name: mariadb
     environment:
       - MYSQL_ROOT_PASSWORD=${MYSQLPASSWORD}
     volumes:
@@ -13,7 +12,6 @@ services:
   app:
     image: ruby:3
     restart: unless-stopped
-    container_name: app
     environment:
       RAILS_ENV: production
       SECRET_KEY_BASE: ${SECRET_KEY}
