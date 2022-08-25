@@ -1,4 +1,4 @@
-## Herramienta de ayuda a la generación de grupos en el aula: Test Sociométricos
+## Herramienta de ayuda a la generación de grupos en el aula
 Este es el repositorio donde se aloja la herramienta, asi como la documentación:
 - [Aquí](doc/tfm_mfp19.pdf) puedes ver el trabajo escrito.
 - La carpeta **server** contiene realmente el codigo. Esta escrito en Ruby on Rails.
